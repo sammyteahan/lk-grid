@@ -1,0 +1,24 @@
+{
+  "name": "lk-grid",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sammyteahan/lk-grid",
+  "authors": [
+    "steahan <sam@lightningkite.com>"
+  ],
+  "description": "A comprehensive sass based css grid system",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "None"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
