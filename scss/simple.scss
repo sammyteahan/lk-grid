@@ -1,0 +1,101 @@
+// Config (variables, widths etc.)
+@import 'config';
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+//WRAP YOUR GRID IN .GRID CLASS
+.lk-grid {
+    margin: 0 auto;
+    max-width: $grid-width;
+    &:after {
+        visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+    }
+}
+
+
+[class*='row-'] {
+    float: left;
+    padding: $col-outside-padding;
+}
+
+//JUST FOR THE DEMO
+.col{
+    background: $lk-color;
+    padding: $col-inside-padding;
+}
+
+
+
+// CREATES CSS FOR GRID
+@for $i from $start through $end {
+    .row-#{$i} {
+        width: $full / $i;
+    }
+}
+
+//STATIC WIDTHS
+.row-20 { width: $full - 80; }
+.row-25 { width: $full - 75; }
+.row-30 { width: $full - 70; }
+.row-35 { width: $full - 65; }
+.row-40 { width: $full - 60; }
+.row-45 { width: $full - 55; }
+.row-50 { width: $full - 50; }
+.row-55 { width: $full - 45; }
+.row-60 { width: $full - 40; }
+.row-65 { width: $full - 35; }
+.row-70 { width: $full - 30; }
+.row-75 { width: $full - 25; }
+.row-80 { width: $full - 20; }
+
+
+
+@media (max-width: 500px) {
+    @for $i from $start through $end {
+        .row-#{$i} {
+            width: $full
+        }
+    }
+}
+
+@media (min-width: 501px) and (max-width: 767px) {
+    .row-10,
+    .row-12 {
+        width: $half;
+    }
+
+    .row-1,
+    .row-5,
+    .row-6,
+    .row-7,
+    .row-8,
+    .row-9,
+    .row-11 {
+        width: $full;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .row-7,
+    .row-11, {
+        width: $full;
+    }
+
+    .row-4,
+    .row-8,
+    .row-10,
+    .row-12 {
+        width: $half;
+    }
+}
