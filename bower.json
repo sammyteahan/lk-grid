@@ -20,5 +20,6 @@
     "test",
     "tests"
   ],
-  "directory" : "vendor"
+  "dependencies" : "bower-installer",
+  "path" : "vendor"
 }
