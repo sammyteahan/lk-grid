@@ -19,7 +19,5 @@
     "node_modules",
     "test",
     "tests"
-  ],
-  "dependencies" : "bower-installer",
-  "path" : "vendor"
+  ]
 }
