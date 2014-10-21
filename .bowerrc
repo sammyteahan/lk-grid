@@ -1,3 +1,4 @@
 {
-	"directory": "~/Development/bower_test/public"
+	"directory": "vendor",
+	"json": "bower.json"
 }
